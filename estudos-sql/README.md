@@ -1,84 +1,39 @@
-# 📊 Estudos de SQL: Google Data Analytics
+# 📊 Repositório de Estudos: SQL (Structured Query Language)
 
-> **Status:** Em andamento 🚀  
-> **Objetivo:** Documentar o aprendizado prático em extração e análise de dados usando a infraestrutura do Google Cloud.
+> **Objetivo:** Documentar minha evolução técnica em manipulação, extração e análise de dados utilizando a linguagem **SQL**.
 
----
-
-## 🛠️ Tecnologias e Ferramentas
-
-* **Plataforma:** [Google Cloud Platform (GCP)](https://cloud.google.com/)
-* **Ferramenta de Dados:** BigQuery Studio (Ambiente Sandbox)
-* **Linguagem:** SQL (Standard SQL)
+Neste espaço, organizo meus desafios práticos e estudos teóricos, aplicando lógica estruturada para transformar grandes volumes de dados em informações relevantes.
 
 ---
 
-## 💡 Conceitos Fundamentais Aprendidos
+## 🛠️ Tecnologias e Ecossistemas
 
-Para interagir com grandes volumes de dados (Big Data), utilizei a estrutura básica de consultas:
-
-1. **SELECT**: Define as colunas ou que desejo visualizar.
-2. **FROM**: Indica a origem dos dados (nome da tabela).
-3. **WHERE**: Aplica filtros lógicos para extrair apenas informações relevantes.
+Embora o foco seja a linguagem SQL, utilizo diferentes ferramentas para execução:
+* **Ambientes de Nuvem:** Google BigQuery (GCP).
+* **Editores de Código:** Visual Studio Code (VS Code) para estruturação de scripts.
+* **Controle de Versão:** Git para documentação de queries.
 
 ---
 
-## 📝 Desafios Práticos Resolvidos
+## 💡 Competências de SQL em Desenvolvimento
 
-Todos os exercícios abaixo foram realizados utilizando o conjunto de dados público de bicicletas de Londres:  
-`bigquery-public-data.london_bicycles.cycle_hire`
+Neste repositório, apresento a aplicação de conceitos fundamentais e avançados:
 
-### 🚲 1. Identificação de Estação por ID
-* **Pergunta:** Qual é o nome da estação cujo start_station_id é  **111**?
-* **Query SQL:**
+1. **DQL (Data Query Language):** Consultas com `SELECT`, `FROM`, `WHERE`.
+2. **Filtros e Operadores:** Uso de lógica booleana e comparadores para segmentação de dados.
+3. **Agregações e Rankings:** Organização de dados com `ORDER BY`, `LIMIT` e funções de contagem.
+4. **Manipulação de Tabelas:** Ingestão de arquivos externos, definição de **Schemas** e tipos de dados.
+5. **Consultas em Larga Escala:** Uso de *Wildcards* (`*`) para análise de múltiplas tabelas históricas.
 
-```sql
-SELECT
-    start_station_name
-FROM
-    `bigquery-public-data.london_bicycles.cycle_hire`
-WHERE
-    start_station_id = 111;
-```
+---
 
-### 🚲 2. Rastreamento de Histórico de Bicicleta
-* **Pergunta:** Retorne todos os rental_ids, IDS de estações e nomes de estações de onde bike_id 1710 partiu.
-* **Query SQL:**
+## 📝 Projetos e Exercícios Práticos
 
-```sql
-SELECT
-    rental_id,
-    start_station_id,
-    start_station_name
-FROM
-    `bigquery-public-data.london_bicycles.cycle_hire`
-WHERE
-    bike_id = 1710;
-```
-### 🚲 3. Identificação de Modelo de Equipamento
-* **Pergunta:** Qual é o bike_model de bike_id 58782 ?
-* **Query SQL:**
+Abaixo, os estudos estão organizados por cenário de aplicação:
 
-```sql
-SELECT
-    bike_model
-FROM
-    `bigquery-public-data.london_bicycles.cycle_hire`
-WHERE
-    bike_id = 58782;
-```
-### 🚲 4. Filtro de Longa Duração
-* **Pergunta:** Quantas  viagens de bicicleta duraram 20 minutos ou mais ( mais de 1200 segundos)? 
-* **Query SQL:**
+### 🚲 [Análise de Mobilidade: Bicicletas de Londres](./01-london-bicycles)
+* **Foco:** Extração de dados públicos (GCP) e filtros de duração/estação.
 
-```sql
-SELECT
-    duration,
-    start_station_name
-FROM
-    `bigquery-public-data.london_bicycles.cycle_hire`
-WHERE
-    duration >= 1200;
-```
-### 👩‍🎓 Sobre Mim
-Estudante em transição de carreira para Dados & Business Intelligence. Atualmente atuando como Tutora de Farmácia e Mediadora Pedagógica, aplicando lógica estruturada na organização de processos educacionais.
+### 👶 [Análise Demográfica: Nomes nos EUA](./02-babynames-usa)
+* **Foco:** Ingestão manual de dados, estruturação de tabelas e consultas multi-tabelas.
+
