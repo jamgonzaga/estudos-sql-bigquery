@@ -7,7 +7,7 @@ Sou profissional da área de Farmácia em transição de carreira para a área d
 ### 📁 Explore meu Portfolio
 
 * 📊 [**Estudos de SQL & BigQuery**](./estudos-sql/): Documentação de aprendizado prático (Curso Google Data Analytics).
-* 🎓 [**Minhas Certificações**](./Certificados/): Galeria de conquistas em IA, Python e Fundamentos de Dados.
+* 🎓 [**Minhas Certificações**](./certificados/): Galeria de conquistas em IA, Python e Fundamentos de Dados.
 
 ---
 
